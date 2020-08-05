@@ -14,8 +14,7 @@ cardano-cli shelley query protocol-parameters \
 #Find your balance and UTXOs:
 cardano-cli shelley query utxo \
    --address $(cat payment.addr) \
-   --mainnet 
- > /tmp/fullUtxo.out
+   --mainnet > /tmp/fullUtxo.out
 
 tail -n +3 /tmp/fullUtxo.out | sort -k3 -nr > /tmp/balance.out
 
