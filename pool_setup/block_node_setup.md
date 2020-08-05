@@ -245,7 +245,7 @@ echo minPoolCost: ${minPoolCost}
 # can't make it happen you can use a URL shortener such as bit.ly or something. 
 
 cardano-cli shelley stake-pool registration-certificate \
-    --cold-verification-key-file ~/pool-keys/node.vkey \
+    --cold-verification-key-file ~/pool-keys/cold.vkey \
     --vrf-verification-key-file ~/pool-keys/vrf.vkey \
     --pool-pledge 10000000000 \
     --pool-cost 340000000 \
@@ -265,7 +265,7 @@ cardano-cli shelley stake-pool registration-certificate \
 
 cardano-cli shelley stake-address delegation-certificate \
     --staking-verification-key-file ~/pool-keys/stake.vkey \
-    --cold-verification-key-file ~/pool-keys/node.vkey \
+    --cold-verification-key-file ~/pool-keys/cold.vkey \
     --out-file ~/pool-keys/deleg.cert
 
 cd ~/pool-keys
